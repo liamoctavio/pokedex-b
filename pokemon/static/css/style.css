@@ -1,0 +1,47 @@
+body {
+  padding-top: 20px;
+  background-color: #f8f9fa;
+  background-image: url("../img/fondo.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.pokemon-card {
+  margin-bottom: 20px;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.card-text {
+  font-size: 0.9rem;
+}
+
+/* Estilos para el logo */
+.logo {
+  max-width: 260px;
+  background: none; /* Asegura que no haya fondo */
+  margin-bottom: 20px; /* Reduce el espacio debajo del logo */
+}
+/* Estilos para el formulario de búsqueda */
+.container-search {
+  margin-top: 20px; /* Añade espacio encima del formulario de búsqueda */
+  margin-bottom: 20px; /* Añade espacio debajo del formulario de búsqueda */
+  position: relative; /* Asegura que los elementos hijos con posición absoluta se posicionen correctamente */
+}
+.autocomplete-suggestions {
+  border: 1px solid #ddd;
+  max-height: 150px;
+  overflow-y: auto;
+  background-color: #fff;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  display: none; /* Ocultar por defecto */
+}
+.autocomplete-suggestion {
+  padding: 8px;
+  cursor: pointer;
+}
+.autocomplete-suggestion:hover {
+  background-color: #f0f0f0;
+}

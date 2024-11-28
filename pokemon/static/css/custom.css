@@ -1,0 +1,103 @@
+/* Colores Personalizados para Tipos de Pokémon */
+
+/* Fuego */
+.bg-fire {
+  background-color: #f08030; /* Naranja fuego */
+  color: white;
+}
+
+/* Agua */
+.bg-water {
+  background-color: #6890f0; /* Azul agua */
+  color: white;
+}
+
+/* Planta */
+.bg-grass {
+  background-color: #78c850; /* Verde planta */
+  color: white;
+}
+
+/* Eléctrico */
+.bg-electric {
+  background-color: #f8d030; /* Amarillo eléctrico */
+  color: black;
+}
+
+/* Hielo */
+.bg-ice {
+  background-color: #98d8d8; /* Azul hielo */
+  color: black;
+}
+
+/* Lucha */
+.bg-fighting {
+  background-color: #c03028; /* Rojo oscuro */
+  color: white;
+}
+
+/* Veneno */
+.bg-poison {
+  background-color: #a040a0; /* Púrpura veneno */
+  color: white;
+}
+
+/* Tierra */
+.bg-ground {
+  background-color: #e0c068; /* Marrón tierra */
+  color: black;
+}
+
+/* Volador */
+.bg-flying {
+  background-color: #a890f0; /* Lavanda */
+  color: white;
+}
+
+/* Psíquico */
+.bg-psychic {
+  background-color: #f85888; /* Rosa psíquico */
+  color: white;
+}
+
+/* Bicho */
+.bg-bug {
+  background-color: #a8b820; /* Verde bicho */
+  color: white;
+}
+
+/* Roca */
+.bg-rock {
+  background-color: #b8a038; /* Marrón roca */
+  color: white;
+}
+
+/* Fantasma */
+.bg-ghost {
+  background-color: #705898; /* Púrpura fantasma */
+  color: white;
+}
+
+/* Dragón */
+.bg-dragon {
+  background-color: #7038f8; /* Púrpura intenso */
+  color: white;
+}
+
+/* Oscuro */
+.bg-dark {
+  background-color: #705848; /* Marrón oscuro */
+  color: white;
+}
+
+/* Acero */
+.bg-steel {
+  background-color: #b8b8d0; /* Gris acero */
+  color: black;
+}
+
+/* Hada */
+.bg-fairy {
+  background-color: #f0b6bc; /* Rosa hada */
+  color: black;
+}

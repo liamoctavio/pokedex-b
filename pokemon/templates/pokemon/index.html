@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pokédex</title>
+    {% load static %} {% load pokemon_extras %}
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}" />
+  </head>
+
+  <body>
+    <!-- Logo -->
+    <div class="container text-center my-4">
+      <a href="{% url 'index' %}">
+        <img
+          src="{% static 'img/logo-4.png' %}"
+          alt="Logo de Pokedex"
+          class="logo img-fluid"
+        />
+      </a>
+    </div>
+    <!-- Formulario de búsqueda -->
+    <div class="container container-search position-relative">
+      <form
+        method="GET"
+        action="{% url 'index' %}"
+        class="d-flex justify-content-center"
+      >
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Buscar Pokémon"
+          aria-label="Search"
+          name="query"
+          id="search-input"
+          autocomplete="off"
+        />
+        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      </form>
+      <div id="autocomplete-list" class="autocomplete-suggestions"></div>
+    </div>
+
+    <!-- Listado de pokemons -->
+    <div class="container">
+      <div class="row">
+        {% for pokemon in pokemons %}
+        <div class="col-12 col-sm-6 col-md-4 pokemon-card">
+          <div class="card">
+            <div class="card-header d-flex justify-content-between">
+              <div>
+                {% for type in pokemon.types %}
+                <span class="badge {{ type|type_color }} rounded-pill"
+                  >{{ type }}</span
+                >
+                {% endfor %}
+              </div>
+              <span>#{{ pokemon.number }}</span>
+            </div>
+            <img
+              src="{{ pokemon.image }}"
+              class="card-img-top img-fluid"
+              alt="{{ pokemon.name }}"
+            />
+            <div class="card-body">
+              <h5 class="card-title">{{ pokemon.name }}</h5>
+              <p class="card-text">{{ pokemon.description }}</p>
+              <a href="#" class="btn btn-primary">Saber más</a>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="{% static 'js/autocomplete.js' %}"></script>
+  </body>
+</html>
